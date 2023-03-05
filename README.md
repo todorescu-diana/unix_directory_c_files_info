@@ -22,4 +22,9 @@ The program takes 2 arguments:
     - if "error" occurs at least once: result is 1
     - if "error" never occurs, but "warning" occurs more than 10 times: result is 2
     - if "error" never occurs, but "warning" occurs less than 10 times: result is 2 + 8*(10 – nr_warning)/10 
-The parent process retrieves the state of each child process and will display it as "Procesul fiu cu PID <pid_fiu> s-a terminat cu codul <cod>." ("Child process with PID <child_pid> ended with code <code>."), and then it will halt.
+The parent process retrieves the state of each child process and will display it as "Procesul fiu cu PID <pid_fiu> s-a terminat cu codul <cod>." ("Child process with PID <child_pid> ended with code < code >."), and then it will halt.
+  
+# Running prorgam
+1. Open command line, go to folder with .c program & test directory
+2. Compile .c program: gcc unix_directory_files_info.c -o udfi_exec
+3. Run program with args - example: ./udfi_exec <absolute_path_to_test_directory> -nuadcgp
